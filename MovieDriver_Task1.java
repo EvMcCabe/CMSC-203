@@ -1,0 +1,50 @@
+import java.util.Scanner; //import Scanner
+public class MovieDriver_Task1 {
+
+	/**
+	 * Given a class called Movie.java: Used to create a driver.
+	 * Ask user input: Movie name(string), rating(string), and soldTickets(int).
+	 * Uses Movie.java setter and getter methods.
+	 * Pass information gained into newly created movie object: usermov.
+	 * Print all gained information using Movie.Java toString() method.
+	 * @param args String array object
+	 */
+	public static void main(String[] args)
+	{
+		
+		// Object creations: Scanner & Movie 
+		Scanner input = new Scanner(System.in);
+		Movie usermov = new Movie();
+		
+		String userMovName;
+		String userMovRating = "";
+		int userMovTickSales = 0;
+			
+		System.out.println("Enter the name of a movie"); // Ask for user input: Title
+		userMovName = input.nextLine();
+			
+		usermov.setTitle(userMovName); //setTitle
+		//System.out.print(usermov.getTitle()); //Test
+			
+		System.out.println("Enter the rating of the movie");  // Ask for user input: Rating
+		userMovRating = input.nextLine();
+			
+		usermov.setRating(userMovRating);
+		//System.out.print(usermov.getRating()); //Test
+			
+		System.out.println("Enter the number of tickets sold for this movie");  // Ask for user input: Rating
+		userMovTickSales = input.nextInt();
+			
+		usermov.setSoldTickets(userMovTickSales);
+		//System.out.print(usermov.getSoldTickets()); //Test
+			
+		System.out.println(usermov.toString()); //print out info 
+			
+		input.nextLine(); // Consume newline character
+		
+		input.close(); //Close scanner
+		
+		
+	}
+
+}
